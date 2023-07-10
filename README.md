@@ -21,7 +21,7 @@ Repo dedicado ao estudo do terraform. :fire:
 #### Intalação do Terraform no MacOS:
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
 
-## Credências do AWS nos S.O como variável
+## Credências do AWS como variável de ambiente no S.O
 
 #### Export para o linux:
 ```bash
@@ -41,7 +41,7 @@ $env:AWS_ACCESS_KEY_ID="SUA_ACCESS_KEY_ID"
 $env:AWS_SECRET_ACCESS_KEY="SUA_SECRET_ACCESS_KEY"
 ```
 
-## Credências do Micrsoft Azure nos S.O como variável
+## Credências do Micrsoft Azure como variável de ambiente no S.O
 
 ##### Export para o linux e MacOs:
 ```bash 
