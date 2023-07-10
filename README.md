@@ -4,22 +4,22 @@ Repo dedicado ao estudo do terraform. :fire:
 ## Instalação no Linux :penguin:
 
 #### Instalação do Terraform no Linux:
-(https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform)
+- https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
 
 ## Instalação no Windows
 #### Instalação do WSL2 no Windows:
-https://learn.microsoft.com/pt-br/windows/wsl/install
+- https://learn.microsoft.com/pt-br/windows/wsl/install
 
 #### Instalação do Chocolatey no Windows:
-https://chocolatey.org/install
+- https://chocolatey.org/install
 
 #### Instalação do Terraform no Windows:
-https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+- https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 
 
 ## Instalação no MacOS
 #### Intalação do Terraform no MacOS:
-https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
+- https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
 
 ## Credências do AWS nos S.O como variável
 
