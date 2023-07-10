@@ -21,7 +21,7 @@ Repo dedicado ao estudo do terraform. :fire:
 #### Intalação do Terraform no MacOS:
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
 
-## Credências do AWS como variável de ambiente no S.O
+## Credências da AWS como variável de ambiente no S.O
 
 #### Export para o linux:
 ```bash
