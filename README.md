@@ -26,6 +26,9 @@ https://www.terraform.io/
 #### Intalação do Terraform no MacOS:
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
 
+## Terraform em Docker :whale:
+- https://hub.docker.com/r/hashicorp/terraform/
+
 ## Credências da AWS como variável de ambiente no S.O ☁
 
 #### Export para o linux:
@@ -72,7 +75,3 @@ $env:ARM_SUBSCRIPTION_ID="SUA_SUBSCRIPTION_ID"
 $env:ARM_CLIENT_SECRET="SEU_CLIENT_SECRET"
 ```
 
-## Terraform em container
-
-#### Docker :whale:
-https://hub.docker.com/r/hashicorp/terraform/
