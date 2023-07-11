@@ -4,7 +4,10 @@ Repo dedicado ao estudo do terraform.
 <img alt="Terraform" src="https://www.datocms-assets.com/2885/1629941242-logo-terraform-main.svg" width="300px">
 
 O Terraform é uma ferramenta Open Source de infraestrutura como código que permite provisionar e gerenciar com segurança e previsibilidade a infraestrutura em qualquer nuvem.
-https://www.terraform.io/
+
+- Documentação: https://developer.hashicorp.com/terraform/language
+- Módulos: https://registry.terraform.io/browse/modules
+- Providers: https://registry.terraform.io/browse/providers
 
 ## Instalação no Linux :penguin:
 
