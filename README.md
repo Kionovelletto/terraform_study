@@ -71,3 +71,8 @@ $env:ARM_TENANT_ID="SUA_TENANT_ID"
 $env:ARM_SUBSCRIPTION_ID="SUA_SUBSCRIPTION_ID"
 $env:ARM_CLIENT_SECRET="SEU_CLIENT_SECRET"
 ```
+
+## Terraform em container
+
+#### Docker :whale:
+https://hub.docker.com/r/hashicorp/terraform/
