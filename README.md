@@ -1,9 +1,9 @@
-# terraform_study
-Repo dedicado ao estudo do terraform. :fire:
+# Terraform Study
+Repo dedicado ao estudo do terraform.
 
 <img alt="Terraform" src="https://www.datocms-assets.com/2885/1629941242-logo-terraform-main.svg" width="300px">
 
-O Terraform é uma ferramenta Open Source para infraestrutura como código que permite provisionar e gerenciar com segurança e previsibilidade a infraestrutura em qualquer nuvem.
+O Terraform é uma ferramenta Open Source de infraestrutura como código que permite provisionar e gerenciar com segurança e previsibilidade a infraestrutura em qualquer nuvem.
 https://www.terraform.io/
 
 ## Instalação no Linux :penguin:
