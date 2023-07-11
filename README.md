@@ -11,7 +11,7 @@ https://www.terraform.io/
 #### Instalação do Terraform no Linux:
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
 
-## Instalação no Windows
+## Instalação no Windows :window:
 #### Instalação do WSL2 no Windows:
 - https://learn.microsoft.com/pt-br/windows/wsl/install
 
@@ -22,7 +22,7 @@ https://www.terraform.io/
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 
 
-## Instalação no MacOS
+## Instalação no MacOS 🍏
 #### Intalação do Terraform no MacOS:
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
 
