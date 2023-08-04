@@ -78,3 +78,15 @@ $env:ARM_SUBSCRIPTION_ID="SUA_SUBSCRIPTION_ID"
 $env:ARM_CLIENT_SECRET="SEU_CLIENT_SECRET"
 ```
 
+## Estrutura de arquivos e extensões do terraform:
+- terraform.tfvars: Utilizado para declarar váriaveis.
+- terraform.tfstate: Arquivo que o terraform salva o estado atual da configuração.
+- terraform.tfstate.backup: O terraform faz um backup do estado anterior da configuração.
+- terraform.lock.hcl: Controlador de versões dos providers.
+
+
+## Documentações oficiais:
+Terraform Language: https://developer.hashicorp.com/terraform/language
+Terraform Providers: https://registry.terraform.io/browse/providers
+Terraform Modules: https://registry.terraform.io/browse/modules
+Sintaxe para declarar versões: https://developer.hashicorp.com/terraform/language/expressions/version-constraints
