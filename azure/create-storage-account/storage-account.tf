@@ -1,7 +1,7 @@
 resource "azurerm_resource_group" "first_resource_group" {
   name     = "storage_account_resource_group"
   location = var.location
-  tags = ""
+  tags = local.commom_tags
 }
 
 resource "azurerm_storage_account" "first_storage_account" {
@@ -10,11 +10,10 @@ resource "azurerm_storage_account" "first_storage_account" {
   location                 = var.location       # A variavel esta apontando para o arquivo variables.tf
   account_tier             = var.account_tier       # A variavel esta apontando para o arquivo variables.tf
   account_replication_type = var.account_replication_type   # A variavel esta apontando para o arquivo variables.tf
-  tags = ""
+  tags = commom_tags 
 }
 
 resource "azurerm_storage_container" "first_container" {
   name                  = ""
-  storage_account_name  = ""
-  container_access_type = azurerm_storage_account.first_storage_account.name   # O nome do storage foi referenciado pelo "storage account" acima.
-}
+  storage_account_name  = azurerm_storage_account.first_storage_account.name   # O nome do storage foi referenciado pelo "storage account" acima.
+} 
