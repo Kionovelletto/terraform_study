@@ -87,7 +87,11 @@ $env:ARM_CLIENT_SECRET="SEU_CLIENT_SECRET"
 
 ## Documentações oficiais:
 Terraform Language: https://developer.hashicorp.com/terraform/language
+
 Terraform Providers: https://registry.terraform.io/browse/providers
+
 Terraform Modules: https://registry.terraform.io/browse/modules
+
 Terraform CLI: https://developer.hashicorp.com/terraform/cli
+
 Sintaxe para declarar versões: https://developer.hashicorp.com/terraform/language/expressions/version-constraints
