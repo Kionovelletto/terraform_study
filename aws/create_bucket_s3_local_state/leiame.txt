@@ -1,0 +1,12 @@
+----No caso dessa configuração, foi utilização autenticação por variavel de ambiente no SO linux:
+
+export AWS_ACCESS_KEY_ID="anaccesskey"
+export AWS_SECRET_ACCESS_KEY="asecretkey"
+export AWS_REGION="us-west-2"
+
+----Para executar o deploy do bucket na AWS com local state:
+terraform init
+terraform validate
+terraform plan --out=plan.out
+terraform apply plan.out
+terraform destroy

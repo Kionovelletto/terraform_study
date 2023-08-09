@@ -1,0 +1,10 @@
+Provisionando recursos em duas providers diferentes, como AWS e Azure.
+
+Necessário a autenticação dos dois providers.
+
+--Comandos:
+terraform init
+terraform fmt
+terraform validate
+terraform plan --out=plan.out
+terraform apply plan.out
