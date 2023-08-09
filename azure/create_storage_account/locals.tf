@@ -1,6 +1,6 @@
 locals {
   commom_tags = {
-    owner = "kio"
+    owner      = "kio"
     managed-by = "terraform"
   }
 }
