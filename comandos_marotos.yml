@@ -20,3 +20,10 @@ terraform workspace select dev: Seleciona o workspace "dev"
 
 # DATA SOURCE
 # https://developer.hashicorp.com/terraform/language/data-sources
+
+# REPLACE RESOURCES
+# https://developer.hashicorp.com/terraform/cli/commands/taint
+terraform apply -replace azurerm_subnet_network_security_group_association.snsga: Vai realizar o replace do recurso citado lá na Azure.
+
+# NULL RESOURCE
+# https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource
