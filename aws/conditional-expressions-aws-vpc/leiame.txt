@@ -1,0 +1,25 @@
+No caso dessa configuração, foi utilização autenticação por variavel de ambiente no SO linux:
+
+export AWS_ACCESS_KEY_ID="anaccesskey"
+export AWS_SECRET_ACCESS_KEY="asecretkey"
+export AWS_REGION="us-west-2"
+
+🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸
+
+Para testar com variavel de ambiente de homologação ou produção para criar a vpn conforme expressão
+no arquivo network.tf, utilize no terminal:
+
+export TF_VAR_environment=develop (assim o recurso não será criado)
+export TF_VAR_environment=prod (o recurso não será criado)
+
+🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸
+
+terraform init
+terraform validate: Valida se a configuração informando se será removido e/ou adicionado recursos.
+terraform fmt: Formata o arquivo .tf no com identações e formato padronizado.
+terraform plan --out=plan.out: Analisa o que será feito e informa se algo será criado e/ou destruido.
+erraform apply plan.out : Aplica de fato as configurações
+terraform destroy: destroi tudo que está configurado 
+
+
+ssh -i aws-key ubuntu@endereco.ip
