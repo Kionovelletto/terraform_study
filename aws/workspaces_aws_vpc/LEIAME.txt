@@ -6,8 +6,7 @@ terraform validate: Valida se a configuração informando se será removido e/ou
 terraform fmt: Formata o arquivo .tf no com identações e formato padronizado.
 terraform plan: Analisa o que será feito e informa se algo será criado e/ou destruido.
 terraform plan --out=plan.out: O mesmo de cima, porém salva o a sáida do no arquivo.
-terraform apply: Aplica de fato as configurações.
-terraform apply plan.out: O mesmo de cima, porém aplica as configurações com a saída do terraform plan --out=plan.out
+terraform apply: Aplica de fato as configurações
 terraform destroy: destroi tudo que está configurado 
 
 # WORKSPACE
