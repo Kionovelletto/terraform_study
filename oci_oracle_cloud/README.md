@@ -26,4 +26,9 @@ region=************************
 key_file=/home/<USER>/.oci/kionovelletto.pem
 ```
 
+- Validando a configuração:
+```bash
+oci os ns get
+```
+
 Documentação oficial: https://www.oracle.com/br/technical-resources/articles/cloudcomp/utilizando-oci-cli-p1.html
