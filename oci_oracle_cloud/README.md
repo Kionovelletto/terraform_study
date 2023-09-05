@@ -15,14 +15,15 @@ oci setup config
 mkdir -p ~/.oci/
 vim ~/.oci/config
 ```
+
 - Preencha e cole no config o template abaixo:
 ```bash
 [DEFAULT]
-user=ocid1.user.o*********
-fingerprint=c3:1p:1****************
-tenancy=ocid1.tenancy.o************
+user=***********
+fingerprint=***********
+tenancy=***********
 region=************************
-key_file=/home/<USER>/.oci/key.pem
-``````
+key_file=/home/<USER>/.oci/kionovelletto.pem
+```
 
 Documentação oficial: https://www.oracle.com/br/technical-resources/articles/cloudcomp/utilizando-oci-cli-p1.html
