@@ -33,4 +33,6 @@ key_file=/home/<USER>/.oci/kionovelletto.pem
 oci os ns get
 ```
 
-Documentação oficial: https://www.oracle.com/br/technical-resources/articles/cloudcomp/utilizando-oci-cli-p1.html
+Documentação oficial de instalação CLI: https://www.oracle.com/br/technical-resources/articles/cloudcomp/utilizando-oci-cli-p1.html
+
+Documentação do provider: https://registry.terraform.io/providers/oracle/oci/latest/docs
