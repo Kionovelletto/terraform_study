@@ -8,7 +8,6 @@ terraform {
 }
 
 resource "oci_objectstorage_bucket" "kio-novelletto-bucket" {
-  #compartment_id        = "ocid1.tenancy.oc1..aaaaaaaap6voj7wqlnulhvpwyoj3ant7gskl4w7hzoc3qlelxhzkstiqrugq"
   compartment_id        = var.compartment_id
   name                  = "kionovelletto-bkt"
   access_type           = "NoPublicAccess"
