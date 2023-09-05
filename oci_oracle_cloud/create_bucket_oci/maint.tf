@@ -7,28 +7,18 @@ terraform {
   }
 }
 
-provider "oci" {
-  tenancy_ocid     = var.tenancy_ocid
-  user_ocid        = var.user_ocid
-  fingerprint      = var.fingerprint
-  private_key_file = var.private_key_file
+resource "oci_objectstorage_bucket" "kio-novelletto-bucket" {
+  #compartment_id        = "ocid1.tenancy.oc1..aaaaaaaap6voj7wqlnulhvpwyoj3ant7gskl4w7hzoc3qlelxhzkstiqrugq"
+  compartment_id        = var.compartment_id
+  name                  = "kionovelletto-bkt"
+  access_type           = "NoPublicAccess"
+  namespace             = "grxppmvrp9cy"
+  versioning            = var.versioning
+  object_events_enabled = var.object_events_enabled
+  #defined_tags          = var.defined_tags
+  freeform_tags         = { "Department" = "DevOps" }
 }
 
-resource "oci_object_storage_bucket" "my_bucket" {
-  name                     = "my-bucket"
-  compartment_id           = var.compartment_id
-  region                   = var.region
-  object_storage_policy_id = var.object_storage_policy_id
-}
-
-output "bucket_name" {
-  value = oci_object_storage_bucket.my_bucket.name
-}
-
-output "bucket_region" {
-  value = oci_object_storage_bucket.my_bucket.region
-}
-
-output "bucket_policy_id" {
-  value = oci_object_storage_bucket.my_bucket.object_storage_policy_id
+output "bucket_id" {
+  value = oci_objectstorage_bucket.kio-novelletto-bucket.id
 }

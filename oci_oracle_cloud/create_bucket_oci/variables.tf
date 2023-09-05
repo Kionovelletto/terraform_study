@@ -1,41 +1,62 @@
-variable "tenancy_ocid" {
+variable "OCI_CLI_TENANCY" {
   description = "Variavel indicando em qual Tenancy será criado o recurso"
   type        = string
-  default     = "-------"
+  default     = "ocid1.tenancy.oc1..aaaaaaaap6voj7wqlnulhvpwyoj3ant7gskl4w7hzoc3qlelxhzkstiqrugq"
 }
 
-variable "user_ocid" {
+variable "OCI_CLI_USER" {
   description = "Variavel que informa o id do usuário OCI"
   type        = string
-  default     = "-------"
+  default     = "ocid1.user.oc1..aaaaaaaaldakitjqqy5vth4fbktk4s3hwg7ph7ux276umx6guv5qoglrpvbq"
 }
 
-variable "fingerprint" {
+variable "OCI_CLI_FINGERPRINT" {
   description = "Print digital da chave recem criada OCI"
   type        = string
-  default     = "-------"
+  default     = "95:f8:7c:a3:4f:09:a7:0a:7a:5c:d1:06:1e:98:f5:08"
 }
 
-variable "private_key_file" {
+variable "OCI_CLI_KEY_FILE" {
   description = "Chave privada criada para o usuario acima na   OCI"
   type        = string
-  default     = "-------"
+  default     = "/home/kio/.oci/kionovelletto.pem"
 }
 
 variable "compartment_id" {
   description = "Indicador de qual compartimento esta sendo utilizado"
   type        = string
-  default     = "-------"
+  default     = "ocid1.compartment.oc1..aaaaaaaaemgvll35cl4hll5exzjo2milw2lllk22xer66ndhcltrauanifqa"
 }
 
-variable "region" {
+variable "OCI_CLI_REGION" {
   description = "Indicador de qual regiao sera utilizada"
   type        = string
-  default     = "-------"
+  default     = "sa-saopaulo-1"
 }
 
-variable "object_storage_policy_id" {
+variable "OCI_CLI_CONFIG_FILE" {
   description = "Politica de seguranca para o storage em questao"
   type        = string
-  default     = "-------"
+  default     = "/home/kio/.oci/config"
 }
+
+variable "object_events_enabled" {
+  description = "Eventos dos objetos ativo?"
+  type        = bool
+  default     = true
+}
+
+variable "versioning" {
+  description = "Versionamento dos objetos ?"
+  type        = string
+  default     = "Enabled"
+}
+
+#variable "defined_tags" {
+#  description = "Tags definidas para o recurso"
+#  type        = map(string)
+#  default     = {
+#    name = "CreatedOn",
+#    age  = "teste-kio"
+#  }
+#}
