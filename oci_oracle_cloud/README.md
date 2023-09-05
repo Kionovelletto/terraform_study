@@ -17,6 +17,8 @@ vim ~/.oci/config
 ```
 
 - Preencha e cole no config o template abaixo:
+Nessa etapa, colete os dados na OCI e gere a API Key.pem
+
 ```bash
 [DEFAULT]
 user=***********
