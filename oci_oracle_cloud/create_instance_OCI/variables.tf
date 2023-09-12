@@ -37,12 +37,6 @@ variable "instance_create_vnic_details_hostname_label" {
   default     = "minha_primeira_VNIC"
 }
 
-variable "oci_core_subnet.test_subnet" {
-  description = "Variavel indicando a subnet"
-  type        = string
-  default     = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaayd23efcnsaqaphnbrwozfnp5ohqnuvc3ui52d2rozbivfr3smoza"
-}
-
 variable "instance_platform_config_type" {
   description = "Variavel indicando a subnet"
   type        = bool
