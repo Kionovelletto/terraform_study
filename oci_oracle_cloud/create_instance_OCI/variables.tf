@@ -67,6 +67,11 @@ variable "instance_shape_config_ocpus" {
   default     = 1
 }
 
+variable "test_image" {
+  description = "Variavel indicando o ID da imagem a ser utilizada na VM"
+  type        = string
+  default     = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaa2wtri6cj5tmag2vmf2as67gyrkxfsyjs4fcssprimaxrohtf6ybq"
+}
 variable "image" {
   description = "Variavel indicando a imagem a ser utilizada na VM"
   type        = string
