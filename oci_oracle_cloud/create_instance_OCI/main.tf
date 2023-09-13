@@ -7,6 +7,13 @@ terraform {
   }
 }
 
+provider "oci" {
+  tenancy_ocid     = var.OCI_CLI_TENANCY
+  user_ocid        = var.OCI_CLI_USER
+  fingerprint      = var.OCI_CLI_FINGERPRINT
+  private_key_path = var.OCI_CLI_KEY_FILE
+  region           = var.OCI_CLI_REGION
+}
 resource "oci_core_instance" "kio_test_instance" {
   availability_domain = var.instance_availability_domain
   compartment_id      = var.compartment_id
@@ -41,7 +48,5 @@ resource "oci_core_instance" "kio_test_instance" {
       operating_system         = var.instance_source_details_instance_source_image_filter_details_operating_system
       operating_system_version = var.instance_source_details_instance_source_image_filter_details_operating_system_version
     }
-
-    kms_key_id = oci_kms_key.test_key.id
   }
 }
