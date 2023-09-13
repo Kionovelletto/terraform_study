@@ -92,8 +92,8 @@ variable "instance_create_vnic_details_hostname_label" {
 
 variable "instance_platform_config_type" {
   description = "Variavel indicando a subnet"
-  type        = bool
-  default     = true
+  type        = string
+  default     = "GENERIC_BM"
 }
 
 variable "instance_preemptible_instance_config_preemption_action_preserve_boot_volume" {
@@ -155,4 +155,9 @@ variable "instance_source_details_instance_source_image_filter_details_operating
   default     = 9
 }
 
+variable "instance_preemptible_instance_config_preemption_action_type" {
+  description = "Tipo de ação de preempção para instâncias preemptíveis"
+  type        = string
+  default     = "terminate"
+}
 

@@ -36,17 +36,17 @@ resource "oci_core_instance" "kio_test_instance" {
     ocpus                     = var.instance_shape_config_ocpus
   }
 
-  source_details {
-    source_id   = oci_core_image.test_image.id
-    source_type = "image"
+  #  source_details {
+  #    source_id   = oci_core_image.test_image.id
+  #    source_type = "image"
 
-    boot_volume_size_in_gbs = var.instance_source_details_boot_volume_size_in_gbs
+  #    boot_volume_size_in_gbs = var.instance_source_details_boot_volume_size_in_gbs
 
-    instance_source_image_filter_details {
-      compartment_id           = var.compartment_id
-      defined_tags_filter      = var.instance_source_details_instance_source_image_filter_details_defined_tags_filter
-      operating_system         = var.instance_source_details_instance_source_image_filter_details_operating_system
-      operating_system_version = var.instance_source_details_instance_source_image_filter_details_operating_system_version
-    }
-  }
+  #    instance_source_image_filter_details {
+  #      compartment_id           = var.compartment_id
+  #      defined_tags_filter      = var.instance_source_details_instance_source_image_filter_details_defined_tags_filter
+  #      operating_system         = var.instance_source_details_instance_source_image_filter_details_operating_system
+  #      operating_system_version = var.instance_source_details_instance_source_image_filter_details_operating_system_version
+  #    }
+  #  }
 }
