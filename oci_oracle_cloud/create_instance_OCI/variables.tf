@@ -128,7 +128,7 @@ variable "test_image" {
 variable "image" {
   description = "Variavel indicando a imagem a ser utilizada na VM"
   type        = string
-  default     = "Oracle Linux 9"
+  default     = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaa2wtri6cj5tmag2vmf2as67gyrkxfsyjs4fcssprimaxrohtf6ybq"
 }
 
 variable "instance_source_details_boot_volume_size_in_gbs" {
