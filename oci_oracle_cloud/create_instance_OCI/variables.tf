@@ -60,7 +60,7 @@ variable "OCI_CLI_CONFIG_FILE" {
   type        = string
   default     = "/home/kio/.oci/config"
 }
-variable "instance_availability_domain" {
+variable "availability_domain" {
   description = "Variavel indicando em qual dominio de falha o recurso vai ser criado"
   type        = string
   default     = "ocid1.domain.oc1..aaaaaaaakg3tlsrvd7qhoznu34wtowoq3z3zk4u3565hlxqaxrjjtazl3znq"
@@ -90,10 +90,10 @@ variable "instance_create_vnic_details_hostname_label" {
   default     = "minha_primeira_VNIC"
 }
 
-variable "instance_platform_config_type" {
+variable "subnet_id" {
   description = "Variavel indicando a subnet"
   type        = string
-  default     = "GENERIC_BM"
+  default     = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaayd23efcnsaqaphnbrwozfnp5ohqnuvc3ui52d2rozbivfr3smozaGENERIC_BM"
 }
 
 variable "instance_preemptible_instance_config_preemption_action_preserve_boot_volume" {
@@ -125,10 +125,10 @@ variable "test_image" {
   type        = string
   default     = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaa2wtri6cj5tmag2vmf2as67gyrkxfsyjs4fcssprimaxrohtf6ybq"
 }
+
 variable "image" {
   description = "Variavel indicando a imagem a ser utilizada na VM"
   type        = string
-  default     = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaa2wtri6cj5tmag2vmf2as67gyrkxfsyjs4fcssprimaxrohtf6ybq"
 }
 
 variable "instance_source_details_boot_volume_size_in_gbs" {
