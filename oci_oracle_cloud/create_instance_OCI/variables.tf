@@ -60,7 +60,7 @@ variable "OCI_CLI_CONFIG_FILE" {
   type        = string
   default     = "/home/kio/.oci/config"
 }
-variable "availability_domain" {
+variable "instance_availability_domain" {
   description = "Variavel indicando em qual dominio de falha o recurso vai ser criado"
   type        = string
   default     = "ocid1.domain.oc1..aaaaaaaakg3tlsrvd7qhoznu34wtowoq3z3zk4u3565hlxqaxrjjtazl3znq"
@@ -72,92 +72,39 @@ variable "instance_shape" {
   default     = "VM.Standard.E2.1.Micro"
 }
 
-variable "instance_create_vnic_details_assign_private_dns_record" {
-  description = "Variavel indicando o detalhe da vnic"
+variable "instance_agent_config_plugins_config_desired_state" {
+  description = "Se algum plugin deve ser habilitato ou não"
+  type = bool
+  default = false  
+}
+
+variable "instance_agent_config_plugins_config_name" {
+  description = "Nome do plugin associado a instancia"
+  type = bool
+  default = false
+}
+
+variable "instance_platform_config_type" {
+  description = "Tipo de plataforma utilizada(Supported types=[INTEL_VM, AMD_MILAN_BM, AMD_ROME_BM, AMD_ROME_BM_GPU, INTEL_ICELAKE_BM, INTEL_SKYLAKE_BM])"
   type        = string
-  default     = "minha_VNIC"
-}
-
-variable "instance_create_vnic_details_display_name" {
-  description = "Variavel indicando o nome da vnic"
-  type        = string
-  default     = "minha_VNIC"
-}
-
-variable "instance_create_vnic_details_hostname_label" {
-  description = "Variavel indicando o label da vnic"
-  type        = string
-  default     = "minha_primeira_VNIC"
-}
-
-variable "subnet_id" {
-  description = "Variavel indicando a subnet"
-  type        = string
-  default     = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaayd23efcnsaqaphnbrwozfnp5ohqnuvc3ui52d2rozbivfr3smozaGENERIC_BM"
-}
-
-variable "instance_preemptible_instance_config_preemption_action_preserve_boot_volume" {
-  description = "Variavel indicando se deseja preservar o boot volume quando a instancia for deletada"
-  type        = bool
-  default     = false
-}
-
-variable "instance_shape_config_baseline_ocpu_utilization" {
-  description = "Variavel indicando a subnet"
-  type        = string
-  default     = "BASELINE_1_2"
-}
-
-variable "instance_shape_config_memory_in_gbs" {
-  description = "Variavel indicando a quantidade de memória alocada para instancia em GB"
-  type        = number
-  default     = 4
-}
-
-variable "instance_shape_config_ocpus" {
-  description = "Variavel indicando a quantidade de OCPUs alocada para instancia"
-  type        = number
-  default     = 1
-}
-
-variable "test_image" {
-  description = "Variavel indicando o ID da imagem a ser utilizada na VM"
-  type        = string
-  default     = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaa2wtri6cj5tmag2vmf2as67gyrkxfsyjs4fcssprimaxrohtf6ybq"
-}
-
-variable "image" {
-  description = "Variavel indicando a imagem a ser utilizada na VM"
-  type        = string
-}
-
-variable "instance_source_details_boot_volume_size_in_gbs" {
-  description = "Variavel indicando o tamanho do boot volume em GB"
-  type        = number
-  default     = 50
-}
-
-variable "instance_source_details_instance_source_image_filter_details_defined_tags_filter" {
-  description = "Variavel indicando o tamanho do boot volume em GB"
-  type        = string
-  default     = "teste_tag_source_image"
-}
-
-variable "instance_source_details_instance_source_image_filter_details_operating_system" {
-  description = "Variavel indicando o sistema operacional da imagem"
-  type        = string
-  default     = "Oracle Linux"
-}
-
-variable "instance_source_details_instance_source_image_filter_details_operating_system_version" {
-  description = "Variavel indicando a versão do sistema operacional da imagem"
-  type        = number
-  default     = 9
+  default     = "AMD_MILAN_BM"
 }
 
 variable "instance_preemptible_instance_config_preemption_action_type" {
-  description = "Tipo de ação de preempção para instâncias preemptíveis"
+  description = "Ação quando a instancia for terminada (Allowed values for this property are: “TERMINATE”, ‘UNKNOWN_ENUM_VALUE’. Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’)"
   type        = string
-  default     = "terminate"
+  default     = "TERMINATE"
+}
+
+variable "instance_preemptible_instance_config_preemption_action_preserve_boot_volume" {
+  description = "preservar o bootvolume ao terminar a instancia"
+  type = bool
+  default = false
+}
+
+variable "test_image" {
+  description = "ID da imagem (https://docs.oracle.com/en-us/iaas/images/image/2ccff166-0f1f-4a11-9ea6-67395a2d184e/)"
+  type = string
+  default = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaqd3z3wr3xy2usvhx6a64vxxy3z7yagc2s44satcro2x7tm4ckcaq"
 }
 
