@@ -74,14 +74,14 @@ variable "instance_shape" {
 
 variable "instance_agent_config_plugins_config_desired_state" {
   description = "Se algum plugin deve ser habilitato ou não"
-  type = bool
-  default = false  
+  type        = bool
+  default     = false
 }
 
 variable "instance_agent_config_plugins_config_name" {
   description = "Nome do plugin associado a instancia"
-  type = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 variable "instance_platform_config_type" {
@@ -98,13 +98,13 @@ variable "instance_preemptible_instance_config_preemption_action_type" {
 
 variable "instance_preemptible_instance_config_preemption_action_preserve_boot_volume" {
   description = "preservar o bootvolume ao terminar a instancia"
-  type = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 variable "test_image" {
   description = "ID da imagem (https://docs.oracle.com/en-us/iaas/images/image/2ccff166-0f1f-4a11-9ea6-67395a2d184e/)"
-  type = string
-  default = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaqd3z3wr3xy2usvhx6a64vxxy3z7yagc2s44satcro2x7tm4ckcaq"
+  type        = string
+  default     = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaqd3z3wr3xy2usvhx6a64vxxy3z7yagc2s44satcro2x7tm4ckcaq"
 }
 
