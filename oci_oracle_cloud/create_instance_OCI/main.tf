@@ -125,7 +125,7 @@ resource "oci_core_instance" "test_instance" {
   # }
   source_details {
     #Required
-    source_id   = oci_core_image.test_image.id
+    source_id   = var.oci_core_image.test_image.id
     source_type = "image"
 
     # #Optional

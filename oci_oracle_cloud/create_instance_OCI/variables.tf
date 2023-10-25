@@ -102,9 +102,19 @@ variable "instance_preemptible_instance_config_preemption_action_preserve_boot_v
   default     = false
 }
 
-variable "test_image" {
-  description = "ID da imagem (https://docs.oracle.com/en-us/iaas/images/image/2ccff166-0f1f-4a11-9ea6-67395a2d184e/)"
-  type        = string
-  default     = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaqd3z3wr3xy2usvhx6a64vxxy3z7yagc2s44satcro2x7tm4ckcaq"
-}
+# variable "test_image" {
+#   description = "ID da imagem (https://docs.oracle.com/en-us/iaas/images/image/2ccff166-0f1f-4a11-9ea6-67395a2d184e/)"
+#   type        = string
+#   default     = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaqd3z3wr3xy2usvhx6a64vxxy3z7yagc2s44satcro2x7tm4ckcaq"
+# }
 
+variable "oci_core_image" {
+  description = "OCI Core Image Configuration"
+  type = object({
+    id = string
+    # Outros campos necessários
+  })
+  default = {
+    id = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaqd3z3wr3xy2usvhx6a64vxxy3z7yagc2s44satcro2x7tm4ckcaq"
+  }
+}
