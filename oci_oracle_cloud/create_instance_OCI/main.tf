@@ -15,7 +15,6 @@ provider "oci" {
 }
 
 resource "oci_core_instance" "test_instance" {
-  #Required
   availability_domain = var.instance_availability_domain
   compartment_id      = var.compartment_id
   shape               = var.instance_shape
@@ -28,7 +27,6 @@ resource "oci_core_instance" "test_instance" {
     # is_management_disabled = var.instance_agent_config_is_management_disabled
     # is_monitoring_disabled = var.instance_agent_config_is_monitoring_disabled
     plugins_config {
-      #Required
       desired_state = var.instance_agent_config_plugins_config_desired_state
       name          = var.instance_agent_config_plugins_config_name
     }
@@ -87,7 +85,6 @@ resource "oci_core_instance" "test_instance" {
   # }
   # metadata = var.instance_metadata
   platform_config {
-    #Required
     type = var.instance_platform_config_type
 
     #Optional
@@ -104,9 +101,7 @@ resource "oci_core_instance" "test_instance" {
     # percentage_of_cores_enabled = var.instance_platform_config_percentage_of_cores_enabled
   }
   preemptible_instance_config {
-    #Required
     preemption_action {
-      #Required
       type = var.instance_preemptible_instance_config_preemption_action_type
 
       #Optional
@@ -124,7 +119,6 @@ resource "oci_core_instance" "test_instance" {
   #     vcpus = var.instance_shape_config_vcpus
   # }
   source_details {
-    #Required
     source_id   = var.test_image
     source_type = "image"
 
@@ -132,7 +126,6 @@ resource "oci_core_instance" "test_instance" {
     # boot_volume_size_in_gbs = var.instance_source_details_boot_volume_size_in_gbs
     # boot_volume_vpus_per_gb = var.instance_source_details_boot_volume_vpus_per_gb
     instance_source_image_filter_details {
-      #Required
       compartment_id = var.compartment_id
 
       #Optional
