@@ -1,0 +1,38 @@
+terraform {
+  required_providers {
+    oci = {
+      source = "oracle/oci"
+      version = "5.19.0"
+    }
+  }
+}
+provider "oci" {
+  tenancy_ocid     = var.OCI_CLI_TENANCY
+  user_ocid        = var.OCI_CLI_USER
+  fingerprint      = var.OCI_CLI_FINGERPRINT
+  private_key_path = var.OCI_CLI_KEY_FILE
+  region           = var.OCI_CLI_REGION
+}
+
+
+resource "oci_core_instance" "ubuntu" {
+  availability_domain = "FAULT-DOMAIN-1"
+  compartment_id      = "ocid1.tenancy.oc1..aaaaaaaap6voj7wqlnulhvpwyoj3ant7gskl4w7hzoc3qlelxhzkstiqrugq"
+  display_name        = "ubuntu"
+  shape               = "VM.Standard.E2.1.Micro"
+  create_vnic_details {
+    assign_public_ip = true
+  }
+  source_details {
+    source_type = "image"
+    source_id   = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaqd3z3wr3xy2usvhx6a64vxxy3z7yagc2s44satcro2x7tm4ckcaq"
+  }
+
+  metadata = {
+    ssh_authorized_keys = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC02ZQt3/3ItmsoitnJOQh9henGJSwK0aYcUj7CxZV4ILLKPJflX+yqiZY7SvFWTa8VFYldOqh1vcLTGrbg0bP9wCEwjB/v5VDGwIUA+My+CGMn7A9VJI+REhmYPKVTmgHQaBGfu89wCCdXrxmgbsdt8ob4+98OnUYWw5UbsfMTMKUI1Cp2ex+9uDnxcY1aa693d4b/AdOQmFN6jQxVJhtr7Dd1kxBcMX6Mx5UvMtyScPH0JJSOkNWnZcMWMinN5VJvFz/rFRUiD9GLwzgYT2KzM9hOPEgW6GXYQ/Un7bgTrov5BCnGg2Hfh0VyGp5Bg0ojmJiwPSl0+JObTUV3UhlZIhtDz9Tn1Hw6+/bACbHmcFpIe88g4QckPO9nMM+oZozK/1i8q9Em8C9uJBLt9zeHXkI84mYCv81v8pTC0ZVL3G0sPH6xZnHTBLvFe9L92+YQXR9GKNOcIBLpxRzpqASJy3fnLE7Rr6lqU5s0Qm0p/7VTMVeg9gDk4r+aJKM2iYU= kio@cactos"
+  }
+
+  freeform_tags = {
+    "Name" = "ubuntu"
+  }
+}

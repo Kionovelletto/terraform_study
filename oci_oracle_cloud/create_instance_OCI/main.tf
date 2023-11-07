@@ -2,7 +2,7 @@ terraform {
   required_providers {
     oci = {
       source  = "oracle/oci"
-      version = "5.18.0"
+      version = "5.19.0"
     }
   }
 }
@@ -125,7 +125,7 @@ resource "oci_core_instance" "test_instance" {
   # }
   source_details {
     #Required
-    source_id   = var.oci_core_image.test_image.id
+    source_id   = var.test_image
     source_type = "image"
 
     # #Optional
